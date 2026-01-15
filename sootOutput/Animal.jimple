@@ -1,0 +1,54 @@
+class Animal extends java.lang.Object
+{
+    int x;
+    int y;
+
+    void <init>()
+    {
+        Animal r0;
+
+        r0 := @this: Animal;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Animal: int y> = 10;
+
+        r0.<Animal: int x> = 10;
+
+        return;
+    }
+
+    void sound()
+    {
+        java.io.PrintStream $r1;
+        Animal r0;
+        int $i0;
+        java.lang.String $r2;
+
+        r0 := @this: Animal;
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        $i0 = r0.<Animal: int y>;
+
+        $r2 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (int)>($i0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("Animal\'s sound: \u0001");
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>($r2);
+
+        return;
+    }
+
+    void tail()
+    {
+        java.io.PrintStream $r0;
+        Animal r1;
+
+        r1 := @this: Animal;
+
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("Animal\'s tail");
+
+        return;
+    }
+}

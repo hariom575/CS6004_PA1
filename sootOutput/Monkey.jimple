@@ -1,0 +1,36 @@
+class Monkey extends Animal
+{
+    int y;
+    int z;
+
+    void <init>()
+    {
+        Monkey r0;
+
+        r0 := @this: Monkey;
+
+        specialinvoke r0.<Animal: void <init>()>();
+
+        r0.<Monkey: int x> = 20;
+
+        r0.<Monkey: int y> = 20;
+
+        r0.<Monkey: int z> = 20;
+
+        return;
+    }
+
+    void tail()
+    {
+        java.io.PrintStream $r0;
+        Monkey r1;
+
+        r1 := @this: Monkey;
+
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>("Monkey\'s tail");
+
+        return;
+    }
+}

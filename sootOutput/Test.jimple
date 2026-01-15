@@ -1,0 +1,54 @@
+public class Test extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        Test r0;
+
+        r0 := @this: Test;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.io.PrintStream $r1;
+        Animal $r0;
+        Monkey $r3;
+        int $i0, $i1;
+        java.lang.String[] r4;
+        java.lang.String $r2;
+
+        r4 := @parameter0: java.lang.String[];
+
+        $r0 = new Animal;
+
+        specialinvoke $r0.<Animal: void <init>()>();
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        $i1 = $r0.<Animal: int x>;
+
+        $i0 = $r0.<Animal: int y>;
+
+        $r2 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (int,int)>($i1, $i0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001 \u0001");
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>($r2);
+
+        virtualinvoke $r0.<Animal: void sound()>();
+
+        $r3 = new Monkey;
+
+        specialinvoke $r3.<Monkey: void <init>()>();
+
+        virtualinvoke $r3.<Animal: void tail()>();
+
+        virtualinvoke $r3.<Animal: void tail()>();
+
+        virtualinvoke $r3.<Animal: void sound()>();
+
+        return;
+    }
+}
